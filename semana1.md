@@ -2,61 +2,53 @@
 
 Introdução e conceitos básicos de processamento da informação através da linguagem Python:
 
-- Variáveis
-- Tipos de dados
-- Entrada e saída
-- Operadores
-- Funções
+*   Variáveis
+*   Tipos de dados
+*   Entrada e saída
+*   Operadores
+*   Funções
 
----
+***
 
 ## Python 3
 
 ### Site oficial: [www.python.org](https://www.python.org)
 
-### Documentação oficial em português: [https://docs.python.org/pt-br/3/](https://docs.python.org/pt-br/3/)
+### Documentação oficial em português: <https://docs.python.org/pt-br/3/>
 
----
+***
 
 ## Interpretador Python
 
-O interpretador Python é o programa que lê e executa comandos da linguagem Python. 
+O interpretador Python é o programa que lê e executa comandos da linguagem Python.
 
 ### Ambiente REPL
 
-O interpretador Python pode ser executado no chamado "ambiente REPL" (_Read-Eval-Print-Loop_). Esse é um modo interativo no qual os comandos digitados em uma linha são executados imediatamente após a tecla <kbd>Enter</kbd> ser pressionada. O ambiente REPL é útil para testar rapidamente comandos e expressões do Python.
+O interpretador Python pode ser executado no chamado "ambiente REPL" (*Read-Eval-Print-Loop*). Esse é um modo interativo no qual os comandos digitados em uma linha são executados imediatamente após a tecla <kbd>Enter</kbd> ser pressionada. O ambiente REPL é útil para testar rapidamente comandos e expressões do Python.
 
 Para abrir o interpretador como um ambiente REPL, abra um terminal de linha de comando (`cmd.exe` no Windows, ou shell do Linux/macOS) e digite `python` seguido de <kbd>Enter</kbd>:
 
-```
-python
-```
+    python
 
 > **Observação**
 >
 > Se `python` não for encontrado, tente `python3` ou `python3.10` (se a versão instalada é a 3.10).
 
-O ambiente REPL exibe um _prompt_ de comando (`>>>`) esperando que algo seja digitado:
+O ambiente REPL exibe um *prompt* de comando (`>>>`) esperando que algo seja digitado:
 
-```
-Python 3.10.6 (main, Mar 10 2023, 10:55:28) [GCC 11.3.0] on linux
-Type "help", "copyright", "credits" or "license" for more information.
->>> 
-```
+    Python 3.10.6 (main, Mar 10 2023, 10:55:28) [GCC 11.3.0] on linux
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>> 
 
 Você pode agora digitar um comando ou expressão em Python. O comando/expressão será executado imediatamente assim que <kbd>Enter</kbd> for pressionado. Por exemplo, digite `2+2` e <kbd>Enter</kbd>:
 
-```
->>> 2+2
-4
-```
+    >>> 2+2
+    4
 
 Digite `print("Olá, mundo!")`:
 
-```
->>> print("Olá, mundo!")
-Olá, mundo!
-```
+    >>> print("Olá, mundo!")
+    Olá, mundo!
 
 O comando `print` imprime na tela os caracteres (letras, números e símbolos) que estão entre aspas.
 
@@ -64,7 +56,7 @@ Para sair do ambiente REPL, digite `quit()` ou pressione <kbd>Ctrl+d</kbd> (no L
 
 ## Interpretando programas
 
-O interpretador Python pode ser usado para interpretar uma sequência de comandos em Python. Essa sequência de comandos constitui um _programa_ em Python.
+O interpretador Python pode ser usado para interpretar uma sequência de comandos em Python. Essa sequência de comandos constitui um *programa* em Python.
 
 Os comandos devem ser digitados dentro de um arquivo em formato de texto não formatado. Esse arquivo de comandos é comumente chamado de "código fonte" do programa.
 
@@ -77,26 +69,22 @@ print("mundo!")
 
 Use um editor de texto não formatado (ex: Bloco de Notas) para digitar o programa acima. Em seguida, salve-o com a extensão ".py". Por exemplo, `olamundo.py`. No terminal, execute `python`, mas passe `olamundo.py` como um argumento, assim:
 
-```
-python olamundo.py
-```
+    python olamundo.py
 
-Internamente, o interpretador Python lerá `olamundo.py` e então _interpretará_ cada linha do código fonte, como se cada linha de `olamundo.py` fosse digitada no ambiente REPL, seguida de <kbd>Enter</kbd>. A saída da tela será
+Internamente, o interpretador Python lerá `olamundo.py` e então *interpretará* cada linha do código fonte, como se cada linha de `olamundo.py` fosse digitada no ambiente REPL, seguida de <kbd>Enter</kbd>. A saída da tela será
 
-```
-Olá,
-mundo!
-```
+    Olá,
+    mundo!
 
 Se você quiser rodar seu programa em outro computador, você deverá copiar seu arquivo `olamundo.py` e executar `python olamundo.py` neste outro computador. Entretanto, isso só funcionará se esse outro computador tiver o interpretador Python instalado.
 
-Em outras linguagens de programação como [C](https://pt.wikipedia.org/wiki/C_(linguagem_de_programa%C3%A7%C3%A3o)), [C++](https://pt.wikipedia.org/wiki/C%2B%2B) e [Rust](https://pt.wikipedia.org/wiki/Rust_(linguagem_de_programa%C3%A7%C3%A3o)), o código fonte é primeiro processado por um programa chamado _compilador_. O compilador gera um novo arquivo que pode ser um arquivo executável. A vantagem do arquivo compilado é que ele não depende mais do código fonte e não precisa de um interpretador para funcionar. Por outro lado, a desvantagem é que o processo de compilação é uma etapa a mais que o desenvolvedor precisa usar, e não serve como um ambiente REPL.
+Em outras linguagens de programação como [C](https://pt.wikipedia.org/wiki/C_\(linguagem_de_programa%C3%A7%C3%A3o\)), [C++](https://pt.wikipedia.org/wiki/C%2B%2B) e [Rust](https://pt.wikipedia.org/wiki/Rust_\(linguagem_de_programa%C3%A7%C3%A3o\)), o código fonte é primeiro processado por um programa chamado *compilador*. O compilador gera um novo arquivo que pode ser um arquivo executável. A vantagem do arquivo compilado é que ele não depende mais do código fonte e não precisa de um interpretador para funcionar. Por outro lado, a desvantagem é que o processo de compilação é uma etapa a mais que o desenvolvedor precisa usar, e não serve como um ambiente REPL.
 
 > **Observação**
 >
-> O arquivo gerado pelo compilador não é mais um arquivo em formato texto; é um arquivo _binário_ que contém sequências de bytes que definem instruções em _linguagem de máquina_. A linguagem de máquina é a linguagem utilizada pelo processador do computador, e portanto é muito rápida. Por outro lado, é uma linguagem de baixo nível de abstração que não foi feita para humanos utilizarem diretamente.
+> O arquivo gerado pelo compilador não é mais um arquivo em formato texto; é um arquivo *binário* que contém sequências de bytes que definem instruções em *linguagem de máquina*. A linguagem de máquina é a linguagem utilizada pelo processador do computador, e portanto é muito rápida. Por outro lado, é uma linguagem de baixo nível de abstração que não foi feita para humanos utilizarem diretamente.
 
----
+***
 
 ## Instalando Python no Visual Studio Code
 
@@ -104,26 +92,27 @@ Usaremos o [Visual Studio Code](https://code.visualstudio.com/) (VS Code) como e
 
 Após instalar o VS Code, instale as seguintes extensões:
 
-- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python): extensão principal que instala outras extensões de produtividade de desenvolvimento em Python.
-- [PyLint](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint): extensão para usar o _linter_ `pylint`. Um _linter_ é uma ferramenta de análise de código que detecta erros de programação, bugs e erros de estilo.
-- [Black Formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter): permite formatar o código fonte automaticamente. Após instalar esta extensão, adicione as seguintes linhas de configuração no arquivo de configurações do usuário do VS Code. Isso serve para que a formatação seja feita automaticamente sempre que o arquivo for salvo:
+*   [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python): extensão principal que instala outras extensões de produtividade de desenvolvimento em Python.
+*   [PyLint](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint): extensão para usar o *linter* `pylint`. Um *linter* é uma ferramenta de análise de código que detecta erros de programação, bugs e erros de estilo.
+*   [Black Formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter): permite formatar o código fonte automaticamente. Após instalar esta extensão, adicione as seguintes linhas de configuração no arquivo de configurações do usuário do VS Code. Isso serve para que a formatação seja feita automaticamente sempre que o arquivo for salvo:
 
-  ```json
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter",
-    "editor.formatOnSave": true
-  }
-  ```
+    ```json
+    "[python]": {
+      "editor.defaultFormatter": "ms-python.black-formatter",
+      "editor.formatOnSave": true
+    }
+    ```
 
-  Para abrir o arquivo de configurações do usuário, pressione <kbd>Ctrl+Shift+P</kbd> (paleta de comandos), e então escreva "Preferences: Open User Settings (JSON)".
+    Para abrir o arquivo de configurações do usuário, pressione <kbd>Ctrl+Shift+P</kbd> (paleta de comandos), e então escreva "Preferences: Open User Settings (JSON)".
 
 > **Observação**
 >
 > Em alguns casos pode ser conveniente desabilitar a análise de código do PyLint para um código fonte específico. Para isso, basta incluir o seguinte texto na primeira linha do arquivo:
 >
->```python
-># pylint: disable=all
->```
+> ```python
+> # pylint: disable=all
+> ```
+>
 > ***
 
 ## Variáveis e Tipos de Dados
@@ -136,13 +125,13 @@ Um dado (valor) pode ser atribuído a uma variável através do **operador de at
 ano = 2023
 ```
 
-Nesta linha, estamos criando (_declarando_) uma variável chamada `ano` e _definindo_ seu valor para `2023`. 
+Nesta linha, estamos criando (*declarando*) uma variável chamada `ano` e *definindo* seu valor para `2023`.
 
 O interpretador Python reconhece automaticamente que o tipo de dado neste caso é um `int` (número inteiro) pois `2023` é um número inteiro.
 
 Quando Python interpreta essa linha, o computador reserva automaticamente um espaço na memória para guardar o valor `2023`.
 
-O nome `ano` passa a ser um "apelido" (em inglês, _alias_) ao endereço de memória que contém o valor `2023`. O interpretador Python determina automaticamente quantos bytes são necessários para representar esse valor.
+O nome `ano` passa a ser um "apelido" (em inglês, *alias*) ao endereço de memória que contém o valor `2023`. O interpretador Python determina automaticamente quantos bytes são necessários para representar esse valor.
 
 Outros exemplos de declaração de variáveis:
 
@@ -151,6 +140,7 @@ idade = 21
 pi = 3.141592
 nome = "Luís Paulo"
 ```
+
 Uma característica da linguagem Python é que é possível declarar diferentes variáveis em uma mesma linha. Para isso, basta separar os nomes e valores por vírgula. Por exemplo, as variáveis do exemplo anterior podem ser criadas em uma mesma linha da seguinte forma:
 
 ```python
@@ -173,7 +163,7 @@ y = "abc" # Modifica a variável y, que agora passa a ser do tipo str (texto ou 
 
 ### Comentários
 
-Observe, nos exemplos anteriores, que usamos o caractere cerquilha `#` para inserir comentários dentro do código. O comentário começa depois de `#` e se estende até o final da linha: 
+Observe, nos exemplos anteriores, que usamos o caractere cerquilha `#` para inserir comentários dentro do código. O comentário começa depois de `#` e se estende até o final da linha:
 
 ```python
 ano = 2023 # Lembrete: no ano que vem preciso atualizar para 2024
@@ -181,12 +171,13 @@ ano = 2023 # Lembrete: no ano que vem preciso atualizar para 2024
 
 Comentários são ignorados pelo interpretador Python, mas servem como uma forma de documentação do código. A documentação através de comentários é útil para esclarecer o código para outros programadores e para nós mesmos no futuro.
 
-Uma outra forma de inserir comentários é através do uso de texto delimitado por três aspas duplas `"""`. Em Python, esse tipo de texto é chamado de _docstring_:
+Uma outra forma de inserir comentários é através do uso de texto delimitado por três aspas duplas `"""`. Em Python, esse tipo de texto é chamado de *docstring*:
 
 ```python
 """Isso é um docstring"""
 x = 10
 ```
+
 Com docstrings podemos estender um comentário em múltiplas linhas, como a seguir:
 
 ```python
@@ -207,7 +198,7 @@ x = 10
 
 ### Nomenclatura
 
-Em Python, nomes de variáveis só podem conter letras, números e o caractere de sublinhado `_` (_underscore_). O nome não pode começar com um número e não pode conter espaços.
+Em Python, nomes de variáveis só podem conter letras, números e o caractere de sublinhado `_` (*underscore*). O nome não pode começar com um número e não pode conter espaços.
 
 ```python
 # CORRETO
@@ -223,7 +214,7 @@ valor.devido = 10.5
 Nome_d@_D1sciplina = "Processamento da Informação"
 ```
 
-> ### **Exercício - Troca de variáveis**
+> ### **Exercício 1.1 - Troca de variáveis**
 >
 > Considere o seguinte programa que define duas variáveis e imprime seu conteúdo na tela:
 >
@@ -236,6 +227,7 @@ Nome_d@_D1sciplina = "Processamento da Informação"
 > print(x)
 > print(y)
 > ```
+>
 > Se esse programa for executado, será mostrado na tela `42` e `PI-UFABC`, nesta ordem.
 >
 > Substitua o comentário por um trecho de código que troca os valores de `x` e `y` (o que está em `x` deve ir para `y`, e vice-versa).
@@ -243,17 +235,20 @@ Nome_d@_D1sciplina = "Processamento da Informação"
 > Assim, quando o programa for executado, deve ser mostrado na tela `PI-UFABC` e `42`, nesta ordem.
 >
 > Atenção! não vale fazer o seguinte:
+>
 > ```python
 > x = "PI-UFABC"
 > y = 42
 > ```
-> ****
+>
+> ***
 
 ### Tipos de Dados
 
 A seguir veremos alguns tipos básicos de dados em Python que são também tipos básicos em outras linguagens de programação:
 
 ## `int`
+
 Número inteiro:
 
 ```python
@@ -263,7 +258,8 @@ z = +42  # A mesma coisa que 42
 ```
 
 ## `float`
-Número real em notação de _ponto flutuante_:
+
+Número real em notação de *ponto flutuante*:
 
 ```python
 x = 10.0  # Note o uso do ponto como separador decimal
@@ -271,11 +267,13 @@ y = 3.14
 z = 2e-1  # Notação científica
 w = -5E2  # Notação científica
 ```
+
 > **Observação**
 >
 > Números em ponto flutuante possuem uma precisão finita, e por isso não são como os números reais de verdade. Por exemplo, experimente fazer `3.14159265e-20 * 1e20`. O resultado deveria ser `3.14159265`, mas não é pois a operação introduz erros de precisão numérica.
 
 ## `bool`
+
 Valor lógico (verdadeiro ou falso):
 
 ```python
@@ -284,7 +282,8 @@ y = False
 ```
 
 ## `str`
-Cadeira de caracteres, ou _string_: 
+
+Cadeia de caracteres, ou *string*:
 
 ```python
 letra_do_alfabeto = "a"
@@ -302,36 +301,33 @@ linha 3
 """
 ```
 
-O tipo de dado determina quais operações podem ser feitas com o dado. Por exemplo, podemos fazer operações aritméticas com `int` e `float` (somar, subtrair, multiplicar, dividir, etc), operações lógicas com `bool` (_e_, _ou_ e _não_), e concatenação de texto com `str`.
+O tipo de dado determina quais operações podem ser feitas com o dado. Por exemplo, podemos fazer operações aritméticas com `int` e `float` (somar, subtrair, multiplicar, dividir, etc), operações lógicas com `bool` (*e*, *ou* e *não*), e concatenação de texto com `str`.
 
 ### O comando `type()`
 
 O comando `type()` serve para mostrar o tipo de dado de uma variável ou valor literal escrito entre os parênteses. Veja o seguinte exemplo no ambiente REPL:
 
-```
->>> x=42
->>> type(x)
-<class 'int'>
-```
+    >>> x=42
+    >>> type(x)
+    <class 'int'>
+
 O tipo de dado de `x` é `int`.
 
-> Mais precisamente, `x` é um _objeto da classe_ `int`. Os conceitos de _classe_ e _objeto_ são conceitos mais avançados de programação e são abordados na disciplina de "Programação Orientada a Objetos". Em Processamento da Informação não precisamos nos aprofundar nesses conceitos.
+> Mais precisamente, `x` é um *objeto da classe* `int`. Os conceitos de *classe* e *objeto* são conceitos mais avançados de programação e são abordados na disciplina de "Programação Orientada a Objetos". Em Processamento da Informação não precisamos nos aprofundar nesses conceitos.
 
 Veja a seguir outros exemplos do uso de `type()`, dessa vez usando valores literais e expressões ao invés de nomes de variáveis:
 
-```
->>> type("Que tipo de dado é esse?")
-<class 'str'>
->>> type(True)
-<class 'bool'>
->>> type(5.2 + 4)
-<class 'float'>
->>>
-```
+    >>> type("Que tipo de dado é esse?")
+    <class 'str'>
+    >>> type(True)
+    <class 'bool'>
+    >>> type(5.2 + 4)
+    <class 'float'>
+    >>>
 
 ### Conversão entre tipos
 
-Podemos usar os comandos `int()`, `float()`, `bool()` e `str()` para converter um tipo de dado em outro. 
+Podemos usar os comandos `int()`, `float()`, `bool()` e `str()` para converter um tipo de dado em outro.
 
 Considere o seguinte exemplo:
 
@@ -353,7 +349,7 @@ Por que o resultado não é `15`? Por causa do tipo de dado!
 
 Observe as aspas na definição das variáveis: `x` e `y` são variáveis do tipo `str`.
 
-Em Python, o uso do operador `+` sobre duas strings resulta na concatenação das strings. Logo, o resultado é uma nova string, `"105"`. 
+Em Python, o uso do operador `+` sobre duas strings resulta na concatenação das strings. Logo, o resultado é uma nova string, `"105"`.
 
 > Lembre-se que todos os caracteres entre aspas simples ou duplas são considerados como valores do tipo `str`.
 
@@ -365,21 +361,22 @@ Para realizarmos a soma de `x` e `y` como números, primeiro precisamos converte
 >>> int(x) + int(y)
 15
 ```
+
 A expressão `int(x) + int(y)` é interpretada de acordo com a seguinte sequência de passos:
 
-1. Primeiro, os valores de `x` e `y` são obtidos. O resultado é uma nova expressão:
+1.  Primeiro, os valores de `x` e `y` são obtidos. O resultado é uma nova expressão:
     ```python
     int("10") + int("5")
     ```
-2. Em seguida, as funções `int` são avaliadas sobre tais valores. O resultado é uma nova expressão:
+2.  Em seguida, as funções `int` são avaliadas sobre tais valores. O resultado é uma nova expressão:
     ```python
     10 + 5
-    ``` 
-3. Por fim, a soma é realizada. O resultado é uma nova expressão:
+    ```
+3.  Por fim, a soma é realizada. O resultado é uma nova expressão:
     ```python
     15
     ```
-4. Como o `15` não está sendo atribuído a nenhuma variável, ele é simplesmente mostrado na tela, como se o usuário digitasse `15` e presionasse <kbd>Enter</kbd> (fora do ambiente REPL não é mostrado nada).
+4.  Como o `15` não está sendo atribuído a nenhuma variável, ele é simplesmente mostrado na tela, como se o usuário digitasse `15` e presionasse <kbd>Enter</kbd> (fora do ambiente REPL não é mostrado nada).
 
 `int(x)` só funciona se os caracteres da string `x` forem dígitos de 0 a 9, opcionalmente com um sinal de mais (`+`) ou de menos (`-`) imediatamente antes do primeiro dígito:
 
@@ -414,12 +411,12 @@ int(True)   # 1
 
 Na conversão de `int`, `float` e `str` para `bool` (e vice-versa):
 
-* `0`, `0.0` e `""` (string vazia) resultam em `False`;
-* Quaisquer outros valores resultam em `True`.
-* `False` é convertido para `0`, `0.0` e `""` (string vazia).
-* `True` é convertido para `1`, `1.0` e `"1"`.
+*   `0`, `0.0` e `""` (string vazia) resultam em `False`;
+*   Quaisquer outros valores resultam em `True`.
+*   `False` é convertido para `0`, `0.0` e `""` (string vazia).
+*   `True` é convertido para `1`, `1.0` e `"1"`.
 
----
+***
 
 ## Entrada e Saída de Dados
 
@@ -443,8 +440,8 @@ Uma outra forma de usar o `print()` é assim:
 ```python
 print("Olá, {}. Tudo bem?".format(nome))
 ```
-As chaves `{}` são substituídas pelo conteúdo de `nome`. Essa é uma forma alternativa ao uso de concatenação de strings. Também é possível colocar mais chaves e variáveis, como no exemplo a seguir:
 
+As chaves `{}` são substituídas pelo conteúdo de `nome`. Essa é uma forma alternativa ao uso de concatenação de strings. Também é possível colocar mais chaves e variáveis, como no exemplo a seguir:
 
 ```python
 nome = "Luís Paulo"
@@ -454,13 +451,11 @@ print("Olá, {}. Sabia que estamos no ano de {}?".format(nome, ano))
 
 O resultado na tela será:
 
-```
-Olá, Luís Paulo. Sabia que estamos no ano de 2023?
-```
+    Olá, Luís Paulo. Sabia que estamos no ano de 2023?
 
 Veja que cada grupo de chaves foi substituído, em ordem, pelo conteúdo de cada variável informada no `format()`.
 
-Há ainda outra forma de usar `print()`: com o uso de _strings formatadas_ ou _f-strings_, assim:
+Há ainda outra forma de usar `print()`: com o uso de *strings formatadas* ou *f-strings*, assim:
 
 ```python
 print(f"Olá, {nome}. Tudo bem?")
@@ -470,56 +465,49 @@ Observe o `f` antes do início da string para indicar que é uma f-string. Dentr
 
 Tanto no uso de `format()` quanto no uso de f-strings, se a expressão entre chaves for avaliada como um número, é possível informar o número de casas decimais que serão mostradas na tela. Por exemplo:
 
-```
->>> x=1/3
->>> x
-0.3333333333333333
->>> print(f"{x}")
-0.3333333333333333
->>> print(f"{x:.2f}")
-0.33
-```
+    >>> x=1/3
+    >>> x
+    0.3333333333333333
+    >>> print(f"{x}")
+    0.3333333333333333
+    >>> print(f"{x:.2f}")
+    0.33
 
 No exemplo acima, `{x}` imprime o número padrão de casas decimais, enquanto que `{x:.2f}` mostra `x` com duas casas decimais. O `2` pode ser substituído por outro número. Por exemplo, `{x:.3f}` mostra três casas decimais, e assim por diante.
 
 Também é possível inserir espaços à esquerda do número. Por exemplo:
 
-```
->>> x=3.1415
->>> print(f"{x:10.2f}")
-      3.14
-```
+    >>> x=3.1415
+    >>> print(f"{x:10.2f}")
+          3.14
 
 Nesse caso, `{x:10.2f}` significa que o valor de `x` terá espaços inseridos à esquerda de modo que o total de carateres mostrado na tela será de pelo menos 10, isto é, no lugar de mostrar `"3.14"` (4 caracteres) será mostrado `"␣␣␣␣␣␣3.14"`,  (10 caracteres, sendo 6 espaços indicados por `␣`).
 
 Ao invés de inserir espaços, é possível inserir zeros. Basta colocar um `0` imediatamente antes do número que indica o total de caracteres:
 
-```
->>> x=3.1415
->>> print(f"{x:010.2f}")
-0000003.14
->>> n=42
->>> print(f"{n:06}")
-000042
-```
+    >>> x=3.1415
+    >>> print(f"{x:010.2f}")
+    0000003.14
+    >>> n=42
+    >>> print(f"{n:06}")
+    000042
 
 Há várias outras opções de formatação de texto disponíveis. Leia a [documentação oficial sobre strings](https://docs.python.org/pt-br/3.9/library/string.html) para mais detalhes.
 
-> ### **Exercício - Saudação**
+> ### **Exercício 1.2 - Saudação**
 >
 > Faça um programa que pede para o usuário seu nome, sobrenome, e então mostra na tela uma mensagem de saudação, seguida da mensagem "Gostei do seu nome.".
 >
 > Veja um exemplo de execução do programa:
 >
-> ```
-> Digite seu nome: Harlen
-> Digite seu sobrenome: Batagelo
-> Bom dia, Harlen Batagelo!
-> Gostei do seu nome.
-> ```
+>     Digite seu nome: Harlen
+>     Digite seu sobrenome: Batagelo
+>     Bom dia, Harlen Batagelo!
+>     Gostei do seu nome.
+>
 > ***
 
----
+***
 
 ## Operadores básicos
 
@@ -542,33 +530,30 @@ Como vimos anteriormente, `+` também é usado para concatenação entre strings
 `*` pode ser usado para repetir a string um número de vezes determinado por um `int`:
 
 Exemplo de concatenação e repetição:
-```
->>> "UF" + "ABC"
-'UFABC'
->>> "blá" * 3
-'blábláblá'
-```
+
+    >>> "UF" + "ABC"
+    'UFABC'
+    >>> "blá" * 3
+    'blábláblá'
 
 Dica: podemos usar o operador de exponenciação `**` para calcular a raiz quadrada. Afinal, a raiz quadrada de um número é esse mesmo número elevado a 1/2. Veja alguns exemplos no REPL:
 
-```
->>> 9**0.5
-3.0
->>> 2**0.5
-1.4142135623730951
->>> 36**(1/2)
-6.0
-```
+    >>> 9**0.5
+    3.0
+    >>> 2**0.5
+    1.4142135623730951
+    >>> 36**(1/2)
+    6.0
 
 Além dos operadores aritméticos, também estão disponíveis as seguintes funções embutidas:
 
-* `abs(x)`: retorna o valor absoluto de `x`.
-* `pow(b, e)`: retorna `b**e`.
-* `bin(x)`: converte o inteiro `x` para binário, em uma string prefixada com `0b`.
-* `hex(x)`: converte o inteiro `x` para hexadecimal, em uma string prefixada com `0x`.
-* `oct(x)`: converte o inteiro `x` para octal, em uma string prefixada com `0o`.
-* `min(arg1, arg2, ...)`: retorna o menor valor entre `arg1`, `arg2` e outros argumentos, se houverem.
-* `max(arg1, arg2, ...)`: retorna o maior valor entre `arg1`, `arg2` e outros argumentos, se houverem.
+*   `abs(x)`: retorna o valor absoluto de `x`.
+*   `pow(b, e)`: retorna `b**e`.
+*   `bin(x)`: converte o inteiro `x` para binário, em uma string prefixada com `0b`.
+*   `hex(x)`: converte o inteiro `x` para hexadecimal, em uma string prefixada com `0x`.
+*   `oct(x)`: converte o inteiro `x` para octal, em uma string prefixada com `0o`.
+*   `min(arg1, arg2, ...)`: retorna o menor valor entre `arg1`, `arg2` e outros argumentos, se houverem.
+*   `max(arg1, arg2, ...)`: retorna o maior valor entre `arg1`, `arg2` e outros argumentos, se houverem.
 
 ### Operadores relacionais
 
@@ -588,12 +573,13 @@ Usaremos operadores relacionais futuramente para criar estruturas de decisão.
 > **Observação**
 >
 > Lembre-se que `x=y` é diferente de `x==y`.
-> * `x=y` é uma **atribuição** e significa "coloque o valor de `y` em `x`";
-> * `x==y` é uma **comparação** e significa "`x` é igual a `y`?".
+>
+> *   `x=y` é uma **atribuição** e significa "coloque o valor de `y` em `x`";
+> *   `x==y` é uma **comparação** e significa "`x` é igual a `y`?".
 
 ### Operadores lógicos
 
-Operadores lógicos são utilizados com dados do tipo `bool` ou dados que podem ser convertidos para `bool` seguindo as regras de conversão vistas anteriormente. 
+Operadores lógicos são utilizados com dados do tipo `bool` ou dados que podem ser convertidos para `bool` seguindo as regras de conversão vistas anteriormente.
 
 Operadores lógicos são comumente utilizados para combinar expressões relacionais.
 
@@ -602,16 +588,16 @@ Operador | Descrição                | Exemplo
 `and`    | E lógico (conjunção)     | `(a >= 0) and (a < 10)`
 `or`     | OU lógico (disjunção)    | `(media < 5) or (faltas > 6)`
 `not`    | NÃO lógico (negação)     | `not game_over`
- 
-* A expressão `x and y` avalia primeiro o `x`.
 
-  Se `x` é `False`, o resultado da expressão é `x`; senão, o resultado é `y`.
-* A expressão `x or y` avalia primeiro o `x`.
+*   A expressão `x and y` avalia primeiro o `x`.
 
-  Se `x` is `True`, o resultado da expressão é `x`; senão, o resultado é `y`.
-* Em `not x`, o operador `not` inverte o valor de `x`.
+    Se `x` é `False`, o resultado da expressão é `x`; senão, o resultado é `y`.
+*   A expressão `x or y` avalia primeiro o `x`.
 
-  Se `x` é `True`, `not x` é `False`. Se `x` é `False`, `not x` é `True`.
+    Se `x` is `True`, o resultado da expressão é `x`; senão, o resultado é `y`.
+*   Em `not x`, o operador `not` inverte o valor de `x`.
+
+    Se `x` é `True`, `not x` é `False`. Se `x` é `False`, `not x` é `True`.
 
 Usaremos operadores lógicos para criar estruturas de decisão em aulas futuras.
 
@@ -640,10 +626,11 @@ z = - x ** 2 + 1 % y
 ```
 
 Sabemos, das regras da matemática, que a ordem das operações segue o acrônimo `PEMDAS`:
-1. `P`: parênteses;
-2. `E`: exponenciação;
-3. `MD`: multiplicação e divisão (da esquerda para a direita);
-4. `AS`: adição e subtração (da esquerda para a direita).
+
+1.  `P`: parênteses;
+2.  `E`: exponenciação;
+3.  `MD`: multiplicação e divisão (da esquerda para a direita);
+4.  `AS`: adição e subtração (da esquerda para a direita).
 
 Entretanto, na expressão acima temos o operador de resto da divisão `%` e o operador de inversão de sinal de `x`. Em qual ordem esses operadores devem ser aplicados?
 
@@ -678,13 +665,14 @@ z = -9 + (1 % y)        # Passo 3: 1 % y  (resto da divisão inteira)
 z = (-9 + 1)            # Passo 4: -9 + 1 (adição)
 z = -8                  # Passo 5: atribuição
 ```
+
 É recomendável usar parênteses para deixar evidente qual a ordem das operações. Por exemplo, a expressão de `z` poderia ser escrita mais claramente da seguinte forma:
 
 ```python
 z = -(x ** 2) + (1 % y)
 ```
 
-> ### **Exercício - Média de notas**
+> ### **Exercício 1.3 - Média de notas**
 >
 > O programa a seguir calcula a média aritmética de duas notas digitadas pelo usuário.
 >
@@ -699,79 +687,74 @@ z = -(x ** 2) + (1 % y)
 >
 > Da forma como está, o programa tem uma limitação importante: **ele só aceita números inteiros!**
 >
-> 1. Modifique o programa para que ele funcione também com notas com casas decimais.
-> 2. Modifique o programa para que ele calcule uma média ponderada: `nota1` deve valer **30%**, e `nota2` deve valer **70%**.
-> 3. Modifique o programa para que ele calcule a média da disciplina segundo o plano de ensino da disciplina. Lembre-se de pedir para o usuário digitar o valor do _epsilon_ que deverá ser somado à nota.
+> 1.  Modifique o programa para que ele funcione também com notas com casas decimais.
+> 2.  Modifique o programa para que ele calcule uma média ponderada: `nota1` deve valer **30%**, e `nota2` deve valer **70%**.
+> 3.  Modifique o programa para que ele calcule a média da disciplina segundo o plano de ensino da disciplina. Lembre-se de pedir para o usuário digitar o valor do *epsilon* que deverá ser somado à nota.
 >
 > ***
 
-> ### **Exercício - Ano de nascimento**
+> ### **Exercício 1.4 - Ano de nascimento**
 >
 > Faça um programa que pede o nome do usuário e sua idade (suponha que é sempre a idade em anos completos). O programa deve então dizer o nome do usuário e seu ano de nascimento.
-> 
+>
 > Veja um exemplo de execução do programa:
 >
-> ```
-> Qual é o seu nome? Luís Paulo
-> Qual é a sua idade? 21
-> Luís Paulo, você nasceu no ano 2002.
-> ```
+>     Qual é o seu nome? Luís Paulo
+>     Qual é a sua idade? 21
+>     Luís Paulo, você nasceu no ano 2002.
 >
 > ***
 
-> ### **Exercício - Parte inteira e parte fracionária**
+> ### **Exercício 1.5 - Parte inteira e parte fracionária**
 >
 > Faça um programa que pede ao usuário um número real e então mostra na tela qual é a parte inteira e qual é a parte fracionária do número.
-> 
+>
 > Veja um exemplo de execução do programa:
 >
-> ```
-> Digite um número real: 36.072
-> A parte inteira é 36 e a parte fracionária é 0.072.
-> ```
+>     Digite um número real: 36.072
+>     A parte inteira é 36 e a parte fracionária é 0.072.
 >
 > ***
 
-> ### **Exercício - Distância entre duas cidades**
+> ### **Exercício 1.6 - Distância entre duas cidades**
 >
 > Faça um programa que calcula a distância entre duas cidades.
 > No início, o programa deve pedir para o usuário a localização de cada cidade, em km ao longo de uma rodovia (vamos supor que as cidades são ligadas por uma mesma rodovia).
 >
 > Veja um exemplo de execução do programa:
 >
-> ```
-> Em qual km da rodovia a cidade 1 está localizada? 34
-> Em qual km da rodovia a cidade 2 está localizada? 86
-> A distância entre as duas cidades é de 52 km.
-> ```
+>     Em qual km da rodovia a cidade 1 está localizada? 34
+>     Em qual km da rodovia a cidade 2 está localizada? 86
+>     A distância entre as duas cidades é de 52 km.
+>
 > Observações:
-> * Você pode considerar as entradas como números inteiros ou reais.
-> * A distância entre as duas cidades não pode ser um número negativo.
+>
+> *   Você pode considerar as entradas como números inteiros ou reais.
+> *   A distância entre as duas cidades não pode ser um número negativo.
 >
 > ***
 
-> ### **Exercício - Equação de segundo grau**
+> ### **Exercício 1.7 - Equação de segundo grau**
 >
 > Faça um programa que pede para o usuário três números reais, `a`, `b` e `c`, e então calcula as raízes da equação de segundo grau com duas casas decimais:
 >
 > $$
 > ax^2+bx+c=0
 > $$
-> 
+>
 > Veja um exemplo de execução do programa:
-> ```
-> Entre com o valor de a: 3
-> Entre com o valor de b: 5
-> Entre com o valor de c: 2
-> As raízes são x1 = -0.67 e x2 = -1.00
-> ```
-> 
+>
+>     Entre com o valor de a: 3
+>     Entre com o valor de b: 5
+>     Entre com o valor de c: 2
+>     As raízes são x1 = -0.67 e x2 = -1.00
+>
 > Dica: use a fórmula de Bhaskara para calcular as raízes:
-> 
+>
 > $$
 > x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
 > $$
-> 
+>
 > ***
 
 ## Funções
@@ -780,20 +763,16 @@ Já vimos alguns exemplos do uso de funções em Python. Por exemplo, `abs(x)` �
 
 Por exemplo, no ambiente REPL:
 
-```
->>> x = -5
->>> y = abs(x)
->>> y
-5
-```
+    >>> x = -5
+    >>> y = abs(x)
+    >>> y
+    5
 
 Também vimos a função `max(arg1, arg2, ...)` que recebe uma sequência varíavel de argumentos e retorna o maior entre eles:
 
-```
->>> z = max(10, -2, 32, 4)
->>> z
-32
-```
+    >>> z = max(10, -2, 32, 4)
+    >>> z
+    32
 
 Em Python, assim com em outras linguagens de programação, podemos criar nossas próprias funções.
 
@@ -805,8 +784,7 @@ def soma(a, b):
     return c
 ```
 
-Podemos agora _chamar_ (isto é, usar) essa função da mesma forma que usamos/chamamos `abs()` ou `max()`. Veja o programa completo:
-
+Podemos agora *chamar* (isto é, usar) essa função da mesma forma que usamos/chamamos `abs()` ou `max()`. Veja o programa completo:
 
 ```python
 # Definição da função soma
@@ -822,12 +800,12 @@ print(y) # A saída na tela será 12
 
 Em Python, `def` é uma palavra reservada (isto é, é uma palavra que não pode ser utilizada como nome de variável). `def` serve para definir uma função.
 
-Após o `def` devemos escrever o nome da função que estamos definindo. O nome da função segue as mesmas regras de nomenclatura de nomes de variáveis. 
+Após o `def` devemos escrever o nome da função que estamos definindo. O nome da função segue as mesmas regras de nomenclatura de nomes de variáveis.
 
-Após escrever o nome da função, colocamos entre parênteses o nome de seus parâmetros separados por vírgula. Os parâmetros são nomes de variáveis que serão criadas com os valores (_argumentos_) de quem chamar a função.
+Após escrever o nome da função, colocamos entre parênteses o nome de seus parâmetros separados por vírgula. Os parâmetros são nomes de variáveis que serão criadas com os valores (*argumentos*) de quem chamar a função.
 
-Após os parênteses há um `:` (dois pontos) que sinaliza que nas próximas linhas estão as instruções que fazem parte da função. Entretanto, tais instruções precisam ter uma quantidade fixa de espaços no início na linha (4 espaços em nosso exemplo). Esses espaços são chamados de **identação** ou 
-**indentação**. 
+Após os parênteses há um `:` (dois pontos) que sinaliza que nas próximas linhas estão as instruções que fazem parte da função. Entretanto, tais instruções precisam ter uma quantidade fixa de espaços no início na linha (4 espaços em nosso exemplo). Esses espaços são chamados de **identação** ou
+**indentação**.
 
 As linhas de código com identação indicam que as instruções fazem parte da função. Mais propriamente, dizemos que as instruções, e as variáveis `a` e `b`, fazem parte do **escopo** da função.
 
@@ -838,19 +816,19 @@ Dentro da função temos as seguintes instruções:
     return c
 ```
 
-* A primeira linha soma `a` e `b`, e então guarda o resultado em `c`.
-* Em seguida, `return c` indica que a função deve retornar com o valor contido em `c`. A palavra `return` também é uma palavra reservada do Python.
+*   A primeira linha soma `a` e `b`, e então guarda o resultado em `c`.
+*   Em seguida, `return c` indica que a função deve retornar com o valor contido em `c`. A palavra `return` também é uma palavra reservada do Python.
 
 Quando a linha `c = soma(10, x)` é interpretada, a seguinte sequência de instruções é executada pela interpretador:
 
-1. A expressão `soma(10, x)` é identificada como uma **chamada de função**. Nesse momento, a execução do programa é desviada momentaneamente para a linha que contém `def soma(a, b)`;
-2. A variável `a` é criada e definida com o argumento `10`;
-3. A variável `b` é criada e definida com o valor de `x`, isto é, `2`;
-4. A linha `c = a + b` é interpretada;
-5. A linha `return c` é interpretada, o que significa que a função deve acabar e retornar o valor de `c`, que é `12`;
-6. A execução do programa retorna para a linha que contém `y = soma(10, x)`. A expressão `soma(10, x)` é então substituída pelo valor retornado pela função, isto é, `12`. Então, `y = soma(10, x)` agora é a mesma coisa que `y = 12`;
-7. A variável `y` é criada com o valor `12`;
-8. A linha `print(y)` é interpretada, resultando na impressão de `12` na tela.
+1.  A expressão `soma(10, x)` é identificada como uma **chamada de função**. Nesse momento, a execução do programa é desviada momentaneamente para a linha que contém `def soma(a, b)`;
+2.  A variável `a` é criada e definida com o argumento `10`;
+3.  A variável `b` é criada e definida com o valor de `x`, isto é, `2`;
+4.  A linha `c = a + b` é interpretada;
+5.  A linha `return c` é interpretada, o que significa que a função deve acabar e retornar o valor de `c`, que é `12`;
+6.  A execução do programa retorna para a linha que contém `y = soma(10, x)`. A expressão `soma(10, x)` é então substituída pelo valor retornado pela função, isto é, `12`. Então, `y = soma(10, x)` agora é a mesma coisa que `y = 12`;
+7.  A variável `y` é criada com o valor `12`;
+8.  A linha `print(y)` é interpretada, resultando na impressão de `12` na tela.
 
 Uma observação importante a ser feita é que, no momento em que a função retorna, todas as variáveis que foram definidas em seu escopo deixam de existir. Então, `a`, `b` e `c` deixam de existir. Se a função for chamada novamente com outros argumentos, as variáveis `a`, `b` e `c` serão criadas novamente no escopo da função.
 
