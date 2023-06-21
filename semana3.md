@@ -463,9 +463,9 @@ Exemplo de saída:
 >
 > Como calcular o triângulo de Pascal:
 >
-> *   O primeiro elemento de cada linha do triângulo de Pascal é 1 ($P_1=1$).
+> *   O primeiro elemento de cada linha do triângulo de Pascal é sempre 1.
 > *   O elemento $P_j$ ($j>1$) da linha $i$ do triângulo de Pascal é dado por
->     $$P_j = \frac{P_{j-1}(i-j)}{j}$$
+>     $$P_j = \frac{P_{j-1}[i-(j-1)]}{j-1}$$
 >
 > Exemplo de execução:
 >

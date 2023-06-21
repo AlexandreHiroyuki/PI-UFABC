@@ -277,3 +277,65 @@ Para ver todas as funções e variáveis disponíveis em `random`, consulte a [d
 >
 > 8. Logo, o MDC de 320 e 250 é 10.
 > ***
+
+> **Exercício 4.6 - Tabuleiro de xadrez**
+>
+> Faça uma função `xadrez(n)` que recebe um inteiro `n` positivo e imprime na tela um padrão de `n` por `n` caracteres de modo a formar um "tabuleiro de xadrez". Use `-`(hífen) e `#` (cerquilha) para denotar as casas brancas e pretas, respectivamente.
+>
+> Exemplos de execução:
+>
+> Para `xadrez(8)`:
+> ```
+> -#-#-#-#
+> #-#-#-#-
+> -#-#-#-#
+> #-#-#-#-
+> -#-#-#-#
+> #-#-#-#-
+> -#-#-#-#
+> #-#-#-#-
+> ```
+>
+> Para `xadrez(3)`:
+> ```
+> -#-
+> #-#
+> -#-
+> ```
+> ***
+
+> **Exercício 4.7 - Tabuleiro de xadrez 2**
+>
+> A partir do programa anterior, faça uma função `xadrez2(n, x)`, onde `n` define o tamanho do tabuleiro e `x` define o tamanho de cada casa do tabuleiro.
+>
+> Exemplos de execução:
+>
+> Para `xadrez(2,3)`:
+> ```
+> ---###
+> ---###
+> ---###
+> ###---
+> ###---
+> ###---
+> ```
+>
+> Para `xadrez(3,5)`:
+> ```
+> -----#####-----
+> -----#####-----
+> -----#####-----
+> -----#####-----
+> -----#####-----
+> #####-----#####
+> #####-----#####
+> #####-----#####
+> #####-----#####
+> #####-----#####
+> -----#####-----
+> -----#####-----
+> -----#####-----
+> -----#####-----
+> -----#####-----
+> ```
+> ***
