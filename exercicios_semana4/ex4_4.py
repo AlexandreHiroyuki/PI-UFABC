@@ -8,7 +8,7 @@ def dentro_do_circulo_unitario(x, y):
 
 def pi_mc(n):
     m = 0
-    for _ in range(0, n):
+    for _ in range(n):
         x, y = random.random(), random.random()
         m += dentro_do_circulo_unitario(x, y)
     return 4 * (m / n)

@@ -13,9 +13,9 @@ def num_digitos(n):
 def palindromo(n):
     """Retorna True se o inteiro n é um palíndromo."""
     nd = num_digitos(n)
-    for i in range(0, nd // 2):
-        es = (n // 10**i) % 10
-        di = (n // 10 ** (nd - i - 1)) % 10
+    for i in range(nd // 2):
+        di = (n // 10**i) % 10
+        es = (n // 10 ** (nd - i - 1)) % 10
         if es != di:
             return False
     return True

@@ -220,7 +220,7 @@ Para ver todas as funções e variáveis disponíveis em `random`, consulte a [d
 >
 > Faça uma função `pi_mc(n)` que retorna o valor aproximado de $\pi$ calculado através de `n` iterações de uma aproximação de Monte Carlo.
 >
-> A aproximição de $\pi$ usando Monte Carlo pode ser feita como a seguir:
+> A aproximação de $\pi$ usando Monte Carlo pode ser feita como a seguir:
 >
 > 1.  Sorteie $n$ pontos $(x,y)$ no plano cartesiano, onde $x$ e $y$ estão no intervalo $[0, 1)$.
 > 2.  Verifique quantos desses pontos estão dentro do círculo de raio 1 ($r=1$) e centralizado na origem. Seja $m$ tal número.
