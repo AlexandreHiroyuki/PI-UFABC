@@ -409,3 +409,56 @@ Método        | Descrição
 > 4. Retorne `res`.
 >
 > ***
+
+> **Exercício 6.7 - Removendo caracteres**
+>
+> Faça uma função `remove_caractere(texto, caractere)` que recebe uma string `texto` e uma string `caractere` de apenas 1 caractere, e remove todas as ocorrências do caractere `caractere` em `texto`. A função deve retornar a string modificada.
+>
+> Por exemplo:
+> * `remove_caractere("papagaio", "a")` deverá retornar `"ppgio"`.
+> * `remove_caractere("computador", "i")` deverá retornar `"computador"`.
+>
+> ***
+
+> **Exercício 6.8 - Número de dígitos**
+>
+> Faça uma função `contar_digitos(texto)` que retorna quantos dígitos (caracteres de `0` a `9`) existem na string `texto`.
+>
+> Por exemplo:
+> * `contar_digitos("j90s1mkj34")` deverá retornar `5`.
+> * `contar_digitos("01216640")` deverá retornar `8`.
+> * `contar_digitos("iwexlk")` deverá retornar `0`.
+>
+> ***
+
+> **Exercício 6.9 - Cartão de cŕedito**
+>
+> Faça uma função `luhn(num_cartao)`, que verifica se um dado número de cartão de crédito é válido de acordo com o "algoritmo de Luhn". O algoritmo de Luhn é o algoritmo utilizado para validar números de cartão de crédito. O parâmetro `num_cartao` é uma string no formato `XXXX XXXX XXXX XXXX` onde `X` é um dígito.
+>
+> Veja como implementar o algoritmo de Luhn:
+> 1. Dobre o valor do segundo e do quarto dígito de cada grupo `XXXX`.
+> 2. Se o valor dobrado for maior que 9, subtraia 9 do resultado.
+> 3. Some todos os dígitos.
+> 4. Se a soma for divisível por 10, o número é válido.
+>
+> Por exemplo:
+> * `luhn("4539 3195 0343 6467")` deverá retornar `True`.
+> * `luhn("8273 1232 7352 0569")` deverá retornar `False`.
+>
+> ***
+
+> **Exercício 6.10 - Distância de Hamming**
+>
+> Faça uma função `hamming(a, b)`, que calcula a distância de Hamming de duas strings `a` e `b` de mesmo tamanho.
+>
+> ***
+
+> **Exercício 6.11 - Isograma**
+>
+>
+> ***
+
+> **Exercício 6.12 - ISBN**
+>
+>
+> ***
