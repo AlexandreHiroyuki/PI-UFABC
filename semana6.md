@@ -436,7 +436,7 @@ Método        | Descrição
 > Faça uma função `luhn(num_cartao)`, que verifica se um dado número de cartão de crédito é válido de acordo com o "algoritmo de Luhn". O algoritmo de Luhn é o algoritmo utilizado para validar números de cartão de crédito. O parâmetro `num_cartao` é uma string no formato `XXXX XXXX XXXX XXXX` onde `X` é um dígito.
 >
 > Veja como implementar o algoritmo de Luhn:
-> 1. Dobre o valor do segundo e do quarto dígito de cada grupo `XXXX`.
+> 1. Dobre o valor do primeiro e terceiro dígitos de cada grupo `XXXX`.
 > 2. Se o valor dobrado for maior que 9, subtraia 9 do resultado.
 > 3. Some todos os dígitos.
 > 4. Se a soma for divisível por 10, o número é válido.
@@ -447,18 +447,58 @@ Método        | Descrição
 >
 > ***
 
-> **Exercício 6.10 - Distância de Hamming**
+> **Exercício 6.10 - Distância de Hamming entre sequências de DNA**
 >
-> Faça uma função `hamming(a, b)`, que calcula a distância de Hamming de duas strings `a` e `b` de mesmo tamanho.
+> Faça uma função `hamming_dna(a, b)`, que calcula a distância de Hamming de duas strings `a` e `b` de mesmo tamanho contendo uma sequência de DNA composta pelas letras `C`, `A`, `G` e `T`.
 >
+> A distância de Hamming é o número diferenças letra por letra entre as strings `a` e `b`. Por exemplo, considere as sequências a seguir:
+>
+> `GCAATCTATDDTCATAT`\
+> `ATGATCGGTCATCGTCT`\
+> `^^^___^^_^^__^_^_ `
+>
+> A distância de Hamming entre elas é 9, pois é o número de diferenças letra por letra (indicadas pelo `^`).
+>
+> Observação: se `a` e `b` tiverem tamanhos diferentes, ou se algum caractere em `a` e `b` não for válido, retorne a distância -1.
+>
+> Exemplos:
+> * `hamming_dna("CTAGGT", "CTAGGT")` deverá retornar `0`
+> * `hamming_dna("AGTGAT", "CTAGGT")`  deverá retornar `4`
+> * `hamming_dna("AGTGA", "CTAGGT")`  deverá retornar `-1`
+> * `hamming_dna("AGTGAX", "CTAGGT")`  deverá retornar `-1`
+> 
 > ***
 
 > **Exercício 6.11 - Isograma**
 >
+> Faça uma função `isograma(texto)` que retorna `True` se a string `texto` é um isograma, e `False` caso contrário. Um isograma é uma palavra ou frase se não tiver nenhuma letra repetida. Entretanto, espaços e hífens podem se repetir.
+>
+> Para fazer esse exercício, use a função embutida `ord(x)` que retorna um número inteiro (código Unicode) associado ao caractere contido na string `x`. Por exemplo, `ord("A")` é `65`. Com isso é possível fazer um histograma de letras indexadas pelo seu código correspondente.
+>
+> Exemplos:
+> * `isograma("UFABC")` deverá retornar `True`
+> * `isograma("abacate")` deverá retornar `False`
+> * `isograma("hoje fui mal")` deverá retornar `True`
+> * `isograma("vê-lo-ias")` deverá retornar `True`
 >
 > ***
 
 > **Exercício 6.12 - ISBN**
 >
+> Faça uma função `isbn(codigo)` que retorna `True` se a string `codigo` é um código ISBN-10 válido, e `False` caso contrário.
 >
+> O código ISBN-10 é usado para identificar livros. O código é um sequência de 10 dígitos, algumas vezes separados por hífens, tal como `3-598-21508-8`. O código é composto por dígitos (`0` a `9`). O último dígito pode ser `X`, representando o valor `10`.
+>
+> Um código ISBN-10 é válido se a seguinte expressão for divisível por `11`:
+>
+> `(d₁*10 + d₂*9 + d₃*8 + d₄*7 + d₅*6 + d₆*5 + d₇*4 + d₈*3 + d₉*2 + d₁₀*1)`,
+>
+> onde `d₁` até `d₁₀` são os dígitos do código.
+>
+> Exemplos:
+> * `isbn("3-598-21508-8")` deverá retornar `True`.
+> * `isbn("3598215088")` deverá retornar `True`.
+> * `isbn("3-598-21507-X")` deverá retornar `True`.
+> * `isbn("359821507-X")` deverá retornar `True`.
+> * `isbn("4-1031-45622-9")` deverá retornar `False`.
 > ***
