@@ -2,7 +2,7 @@
 
 ## Conjuntos
 
-Até agora usamos listas (dados do tipo `list`) para armazenar coleções de dados. Vimos que uma lista em Python permite a inclusão de valores de diferentes tipos, incluindo valores repetidos. Além disso, também permite que os valores possam ser acessados e modificados via indexação. Ppor exemplo, `x[0]` acessa o primeiro elemento da lista `x`.
+Até agora usamos listas (dados do tipo `list`) para armazenar coleções de dados. Vimos que uma lista em Python permite a inclusão de valores de diferentes tipos, incluindo valores repetidos. Além disso, também permite que os valores possam ser acessados e modificados via indexação. Por exemplo, `x[0]` acessa o primeiro elemento da lista `x`.
 
 Uma outra coleção de dados fornecida pela linguagem Python é o **conjunto**, de tipo de dado `set`. Diferente da lista, um conjunto não permite elementos duplicados. Além disso, não permite indexação e não permite que um elemento seja modificado. Entretanto, podemos remover um elemento e inserir um novo.
 
