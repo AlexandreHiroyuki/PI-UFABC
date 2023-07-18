@@ -237,3 +237,34 @@ pois `len(x[2])` é `2`, mas todas as outras linhas têm tamanho 3.
 > Então, em `i, j = indice_do_maximo(mat)`, `i` será `2` e `j` será `0`, pois `mat[2][0]` contém o maior elemento (`61`).
 >
 > ***
+
+> **Exercício 8.8 - Linha e coluna igual (versão 1)**
+>
+> Faça uma função `linha_coluna_igual1(mat)` que recebe uma matriz `mat` de tamanho _n_ x _n_ e retorna `True` se existe alguma linha que seja igual a alguma coluna.
+>
+> Por exemplo, se `mat` é a seguinte matriz:
+>
+> ```python
+> mat = [[ 9, -8,  3],
+>        [-8, -1,  21],
+>        [ 3,  7,  9]]
+> ``` 
+> Então, `linha_coluna_igual1(mat)` é `True` pois a primeira linha é igual à primeira coluna.
+>
+> ***
+
+
+> **Exercício 8.9 - Linha e coluna igual (versão 2: fora de ordem)**
+>
+> No exercício anterior, uma linha e coluna são consideradas iguais apenas se os elementos aparecem na mesma ordem. Neste exercício, considere que a ordem dos elementos não importa. Basta que a linha e a coluna tenham os mesmos elementos, em qualquer ordem.
+>
+> Por exemplo, se `mat` é a seguinte matriz:
+>
+> ```python
+> mat = [[ 9, -8,  3],
+>        [ 5, -1,  9],
+>        [ 0,  7, -8]]
+> ``` 
+> Então, `linha_coluna_igual2(mat)` é `True` pois os elementos da primeira linha também estão na última coluna (ainda que em uma ordem diferente).
+>
+> ***
